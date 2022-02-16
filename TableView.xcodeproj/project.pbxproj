@@ -12,8 +12,8 @@
 		2232304127BC0E5F001EA25B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232303F27BC0E5F001EA25B /* Main.storyboard */; };
 		2232304327BC0E60001EA25B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2232304227BC0E60001EA25B /* Assets.xcassets */; };
 		2232304627BC0E60001EA25B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232304427BC0E60001EA25B /* LaunchScreen.storyboard */; };
-		2232305127BC0E60001EA25B /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2232305027BC0E60001EA25B /* TableViewTests.swift */; };
 		2232306E27BC134A001EA25B /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2232306D27BC134A001EA25B /* MyTableViewController.swift */; };
+		228DDC7427BD4DA000710FE5 /* MyTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228DDC7327BD4DA000710FE5 /* MyTableViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,8 +35,8 @@
 		2232304527BC0E60001EA25B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2232304727BC0E60001EA25B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2232304C27BC0E60001EA25B /* TableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2232305027BC0E60001EA25B /* TableViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTests.swift; sourceTree = "<group>"; };
 		2232306D27BC134A001EA25B /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
+		228DDC7327BD4DA000710FE5 /* MyTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +92,7 @@
 		2232304F27BC0E60001EA25B /* TableViewTests */ = {
 			isa = PBXGroup;
 			children = (
-				2232305027BC0E60001EA25B /* TableViewTests.swift */,
+				228DDC7327BD4DA000710FE5 /* MyTableViewControllerTests.swift */,
 			);
 			path = TableViewTests;
 			sourceTree = "<group>";
@@ -208,7 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2232305127BC0E60001EA25B /* TableViewTests.swift in Sources */,
+				228DDC7427BD4DA000710FE5 /* MyTableViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
