@@ -24,7 +24,7 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(model[indexPath.row])
+        print("Value selected: \(model[indexPath.row])")
     }
 
 }

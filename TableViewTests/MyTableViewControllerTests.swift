@@ -7,7 +7,11 @@ final class MyTableViewControllerTests: XCTestCase {
         let viewController = setUpViewController()
         
         XCTAssertNotNil(viewController.tableView.dataSource, "DataSource")
+        XCTAssertIdentical(viewController.tableView.dataSource.self, viewController.self, "DataSource same")
+        XCTAssertTrue(viewController.tableView.dataSource.self === viewController.self, "DataSource same 2")
+
         XCTAssertNotNil(viewController.tableView.delegate, "Delegate")
+        XCTAssertIdentical(viewController.tableView.delegate.self, viewController.self, "Delegate same)")
     }
     
     func test_numberOfRows_shouldBeThree() {
@@ -37,12 +41,24 @@ final class MyTableViewControllerTests: XCTestCase {
         XCTAssertEqual(cell?.textLabel?.text, "Three")
     }
     
+    func test_didSelectRow_withRow1() {
+        let viewController = setUpViewController()
+        
+        didSelectRow(in: viewController.tableView, row: 1)
+        
+        #warning("Should assert something here")
+    }
+    
     private func numberOfRows(in tableView: UITableView, section: Int = 0) -> Int? {
         tableView.dataSource?.tableView(tableView, numberOfRowsInSection: section)
     }
     
-    fileprivate func cellForRow(in tableView: UITableView, row: Int, section: Int = 0) -> UITableViewCell? {
+    private func cellForRow(in tableView: UITableView, row: Int, section: Int = 0) -> UITableViewCell? {
         return tableView.dataSource?.tableView(tableView, cellForRowAt: IndexPath(row: row, section: section))
+    }
+    
+    private func didSelectRow(in tableView: UITableView, row: Int, section: Int = 0) {
+        tableView.delegate?.tableView?(tableView, didSelectRowAt: IndexPath(row: row, section: section))
     }
     
     private func setUpViewController() -> MyTableViewController {
