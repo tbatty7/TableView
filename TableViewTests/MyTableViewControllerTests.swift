@@ -14,10 +14,12 @@ final class MyTableViewControllerTests: XCTestCase {
         XCTAssertIdentical(viewController.tableView.delegate.self, viewController.self, "Delegate same)")
     }
     
-    func test_numberOfRows_shouldBeThree() {
+    func test_numberOfRows_shouldBeCountOfItemsInModel() {
         let viewController = setUpViewController()
+        viewController.model = ["One", "Two", "Three", "Four"]
+        viewController.loadViewIfNeeded()
         
-        XCTAssertEqual(numberOfRows(in: viewController.tableView), 3)
+        XCTAssertEqual(numberOfRows(in: viewController.tableView), viewController.model.count)
     }
     
     func test_cellForRowAt_withRow0_shouldSetCellLabelToOne() {

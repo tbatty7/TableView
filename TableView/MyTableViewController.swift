@@ -9,7 +9,7 @@ import UIKit
 
 class MyTableViewController: UITableViewController {
 
-    private let model = ["One", "Two", "Three"]
+    var model = ["One", "Two", "Three"]
        
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         model.count
