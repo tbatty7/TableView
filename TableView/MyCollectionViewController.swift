@@ -14,22 +14,37 @@ class MyCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .gray
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-                
         self.collectionView.register(MyCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
     
     override func loadView() {
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+
         layout.itemSize = CGSize(width: 60, height: 60)
         layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 0, right: 0)
 //        layout.sectionInset = UIEdgeInsets()
         layout.minimumInteritemSpacing = 0
-               
+
 //        layout.scrollDirection = .horizontal
         self.view = nil
-        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+//        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        self.collectionView = UICollectionView(frame: .zero, collectionViewLayout: createBasicListLayout())
+    }
+    
+    func createBasicListLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                             heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+      
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0),
+                                              heightDimension: .absolute(40))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize,
+                                                         subitems: [item])
+      
+        let section = NSCollectionLayoutSection(group: group)
+
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
     }
     
     init(text: String) {
