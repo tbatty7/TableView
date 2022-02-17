@@ -34,7 +34,7 @@ class MyCollectionViewController: UICollectionViewController {
     
     init(text: String) {
         super.init(nibName: nil, bundle: nil)
-        print("Started CollectionViewController with \(text)")
+        print("Started CollectionViewController \(text)")
     }
     
     required init?(coder: NSCoder) {
