@@ -16,15 +16,20 @@ class MyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "mycell", for: indexPath)
         cell.textLabel?.text = model[indexPath.row]
-                
+
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nextVC = MyCollectionViewController(text: "From MyTableViewController")
+        self.navigationController?.pushViewController(nextVC, animated: true)
         print("Value selected: \(model[indexPath.row])")
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemTeal
+    }
 }

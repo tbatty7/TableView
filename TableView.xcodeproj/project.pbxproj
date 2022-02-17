@@ -14,6 +14,7 @@
 		2232304627BC0E60001EA25B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2232304427BC0E60001EA25B /* LaunchScreen.storyboard */; };
 		2232306E27BC134A001EA25B /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2232306D27BC134A001EA25B /* MyTableViewController.swift */; };
 		228DDC7427BD4DA000710FE5 /* MyTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228DDC7327BD4DA000710FE5 /* MyTableViewControllerTests.swift */; };
+		228DDC7627BD797600710FE5 /* MyCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 228DDC7527BD797600710FE5 /* MyCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +38,7 @@
 		2232304C27BC0E60001EA25B /* TableViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2232306D27BC134A001EA25B /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 		228DDC7327BD4DA000710FE5 /* MyTableViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewControllerTests.swift; sourceTree = "<group>"; };
+		228DDC7527BD797600710FE5 /* MyCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				2232304427BC0E60001EA25B /* LaunchScreen.storyboard */,
 				2232304727BC0E60001EA25B /* Info.plist */,
 				2232306D27BC134A001EA25B /* MyTableViewController.swift */,
+				228DDC7527BD797600710FE5 /* MyCollectionViewController.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				228DDC7627BD797600710FE5 /* MyCollectionViewController.swift in Sources */,
 				2232303A27BC0E5F001EA25B /* AppDelegate.swift in Sources */,
 				2232306E27BC134A001EA25B /* MyTableViewController.swift in Sources */,
 				2232303C27BC0E5F001EA25B /* SceneDelegate.swift in Sources */,
